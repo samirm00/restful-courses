@@ -6,17 +6,14 @@ A collection of user stories you can choose from. Stories inside of each priorit
 
 > these are necessary for basic usability
 
-- [ ] A user can add todo to the list
+- [ ] - _acceptance criteria ..._
+- [ ] - _acceptance criteria ..._
+- [ ]
   - _acceptance criteria ..._
-- [ ] A user can get all todos
+- [ ]
   - _acceptance criteria ..._
-- [ ] A user get one todo using todo id
-  - _acceptance criteria ..._
-- [ ] A user can modify todo
-  - _acceptance criteria ..._
-- [ ] A user can check and uncheck todo
-  - _acceptance criteria ..._
-  - [ ] A user can delete a todo
+- [ ] - _acceptance criteria ..._
+  - [ ]
   - _acceptance criteria ..._
 
 ## Should-Haves
