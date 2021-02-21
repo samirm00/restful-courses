@@ -15,11 +15,9 @@
 
 ## General info
 
-A todo list , the objective is using REST API to `POST`, `PATCH`, `DELETE`, `GET` todos to a `db.json` file .
-
 ## Screenshots
 
-![Example screenshot](planning/img/screenShot.png)
+![Example screenshot]()
 
 ## Technologies
 
@@ -32,30 +30,11 @@ A todo list , the objective is using REST API to `POST`, `PATCH`, `DELETE`, `GET
 
 ## Setup
 
-- `npm install`
-- `npm run start`
-
 ## Code Examples
 
 ```js
 "use strict";
 
-import { Todo } from "../classes/todo.js";
-
-// handler get one todo
-
-export const handleGetOneTodo = async (target) => {
-  const id = Number(target.currentTarget.form.id.value);
-
-  const newTodo = new Todo();
-
-  const todoData = await newTodo.getOneTodo(id);
-
-  const render = await newTodo.renderTodo(todoData);
-  const appendTodo = document.getElementById("root");
-  appendTodo.innerHTML = "";
-  appendTodo.appendChild(render);
-};
 ```
 
 ## Features
