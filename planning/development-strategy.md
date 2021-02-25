@@ -108,7 +108,7 @@
 
 ## 4. post a new course
 
-**As a user I want to be able to post a new course **
+**As a user I want to be able to post a new course**
 
 ### REPO
 
@@ -132,7 +132,7 @@
 
 ## 5. put(update) a course
 
-**As a user I want to be able to update a course **
+**As a user I want to be able to update a course**
 
 ### REPO
 
@@ -156,7 +156,7 @@
 
 ## 6. delete a course by id
 
-**As a user I want to be able to delete a course **
+**As a user I want to be able to delete a course**
 
 ### REPO
 
