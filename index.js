@@ -9,14 +9,7 @@ app.use(express.json());
 // json file path
 const path = __dirname + "/" + "courses.json";
 app.get("/", (req, res) => {
-  res.send(`
-  <div style="text-align:center;margin-top:20px;font-weight:700 ">
-    <h1>Welcome to courses RESTful API</h1><br>
-    <h3>use: /api/courses to access all the courses</h3><br>
-    <h3>use: /api/courses/id to access a specific course with id</h3><br>
-    <h3>use: Postman to GET, POST,  PUT and DELETE course(s)</h3><br> 
-  </div> 
-  `);
+  res.send("welcome to courses API");
 });
 
 // a variable to save parsed courses for GET requests
