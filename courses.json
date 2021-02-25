@@ -1,0 +1,32 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "gamma-ray"
+    },
+    {
+      "id": 2,
+      "name": "X-ray"
+    },
+    {
+      "id": 3,
+      "name": "Ultraviolet ray"
+    },
+    {
+      "id": 4,
+      "name": "Visible ray"
+    },
+    {
+      "id": 5,
+      "name": "infrared  ray"
+    },
+    {
+      "id": 6,
+      "name": "microwave ray "
+    },
+    {
+      "id": 7,
+      "name": "radio ray"
+    }
+  ]
+}
