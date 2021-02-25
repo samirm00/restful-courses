@@ -6,16 +6,16 @@ const fs = require("fs");
 const app = express();
 app.use(express.json());
 
-// json file path
-const path = `${__dirname}/../courses.json`;
+// json file PATH_COURSES
 
+const PATH_COURSES = __dirname + "/" + "courses.json";
 app.get("/", (req, res) => {
   res.send(`
   <div style="text-align:center;margin-top:20px;font-weight:700 ">
     <h1>Welcome to courses RESTful API</h1><br>
-    <h3>use: /api/courses to access all the courses</h3><br>
-    <h3>use: /api/courses/id to access a specific course with id</h3><br>
-    <h3>use: Postman to GET, POST,  PUT and DELETE course(s)</h3><br> 
+    <h3>use:<span style ="color : green"> /api/courses</span> to access all the courses</h3><br>
+    <h3>use:<span style ="color : green">  /api/courses/id </span>to access a specific course with<span style ="color : green"> id</span></h3><br>
+    <h3>use: <span style ="color : green">Postman </span> to GET, POST,  PUT and DELETE course(s)</h3><br> 
   </div> 
   `);
 });
@@ -25,7 +25,7 @@ let parsedCourses;
 
 // GET all courses
 app.get("/api/courses", (req, res) => {
-  fs.readFile(path, "utf-8", (err, data) => {
+  fs.readFile(PATH_COURSES, "utf-8", (err, data) => {
     if (err) {
       console.log(err);
     }
@@ -56,7 +56,7 @@ app.post("/api/courses", (req, res) => {
     return;
   }
   // read course.json
-  fs.readFile(path, "utf-8", (err, data) => {
+  fs.readFile(PATH_COURSES, "utf-8", (err, data) => {
     if (err) {
       console.log(err);
     }
@@ -74,7 +74,7 @@ app.post("/api/courses", (req, res) => {
     const stringifyCourses = JSON.stringify(parsedData, null, 2);
 
     // write the new changes to course.json
-    fs.writeFile(path, stringifyCourses, (err) => {
+    fs.writeFile(PATH_COURSES, stringifyCourses, (err) => {
       if (err) {
         res.status(500).send(err);
         return;
@@ -93,7 +93,7 @@ app.put("/api/courses/:id", (req, res) => {
     return;
   }
 
-  fs.readFile(path, "utf-8", (err, data) => {
+  fs.readFile(PATH_COURSES, "utf-8", (err, data) => {
     if (err) {
       console.log(err);
     }
@@ -117,7 +117,7 @@ app.put("/api/courses/:id", (req, res) => {
     const stringifyCourses = JSON.stringify(parsedData, null, 2);
 
     // write the updated course to course.json
-    fs.writeFile(path, stringifyCourses, (err) => {
+    fs.writeFile(PATH_COURSES, stringifyCourses, (err) => {
       if (err) {
         res.status(500).send(err);
         return;
@@ -131,7 +131,7 @@ app.put("/api/courses/:id", (req, res) => {
 
 //DELETE a course by id
 app.delete("/api/courses/:id", (req, res) => {
-  fs.readFile(path, "utf-8", (err, data) => {
+  fs.readFile(PATH_COURSES, "utf-8", (err, data) => {
     if (err) {
       console.log(err);
     }
@@ -157,7 +157,7 @@ app.delete("/api/courses/:id", (req, res) => {
     const stringifyCourses = JSON.stringify(parsedData, null, 2);
 
     // write the new changes to course.json
-    fs.writeFile(path, stringifyCourses, (err) => {
+    fs.writeFile(PATH_COURSES, stringifyCourses, (err) => {
       if (err) {
         res.status(500).send(err);
         return;
@@ -177,5 +177,5 @@ function courseValidation(course) {
   return schema.validate(course);
 }
 // set port environments
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}  ...`));
