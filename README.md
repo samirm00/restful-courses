@@ -37,7 +37,7 @@
 
 - `npm start`
 
-- use `Postman` to `GET`, `POST` , `PUT` and `DELETE` courses
+- use `Postman` to `GET`, `POST` , `PUT` and `DELETE` course(s)
 
 ## Code Examples
 
