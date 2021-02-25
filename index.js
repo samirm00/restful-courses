@@ -170,5 +170,5 @@ function courseValidation(course) {
   return schema.validate(course);
 }
 // set port environments
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}  ...`));
