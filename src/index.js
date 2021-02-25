@@ -1,6 +1,5 @@
 "use strict";
 
-"use strict";
 const express = require("express");
 const Joi = require("joi");
 const fs = require("fs");
@@ -19,4 +18,18 @@ app.get("/", (req, res) => {
     <h3>use: Postman to GET, POST,  PUT and DELETE course(s)</h3><br> 
   </div> 
   `);
+});
+
+// a variable to save parsed courses for GET requests
+let parsedCourses;
+
+// GET all courses
+app.get("/api/courses", (req, res) => {
+  fs.readFile(path, "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+    parsedCourses = JSON.parse(data);
+    res.status(200).send(parsedCourses);
+  });
 });
