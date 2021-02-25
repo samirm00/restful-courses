@@ -7,8 +7,7 @@ const app = express();
 app.use(express.json());
 
 // json file path
-const path = `${__dirname}/courses.json`;
-
+const path = __dirname + "/" + "courses.json";
 app.get("/", (req, res) => {
   res.send(`
   <div style="text-align:center;margin-top:20px;font-weight:700 ">
