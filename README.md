@@ -33,7 +33,9 @@
 
 ## Setup
 
--`npm install` -`npm start`
+- `npm install`
+
+- `npm start`
 
 - use `Postman` to `GET`, `POST` , `PUT` and `DELETE` courses
 
