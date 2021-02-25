@@ -15,7 +15,7 @@
 
 ## General info
 
-> A simple RESTful API . the objective is using `express` , `node` , and `Postman` to create and test RESTful API and read and write to file system `fs` in node.
+> A simple RESTful API . the objective is using `express` , `node` , and `Postman` to create and test RESTful API and read and write to `json` file using the file system `fs` in node.
 
 ## Screenshots
 
@@ -101,6 +101,8 @@ To-do list:
 Project is: _in progress_
 
 ## Inspiration
+
+How to build a REST API with Node js & Express by [Mosh]
 
 ## Contact
 
