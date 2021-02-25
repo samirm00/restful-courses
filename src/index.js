@@ -128,3 +128,54 @@ app.put("/api/courses/:id", (req, res) => {
     });
   });
 });
+
+//DELETE a course by id
+app.delete("/api/courses/:id", (req, res) => {
+  fs.readFile(path, "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+
+    const parsedData = JSON.parse(data);
+    const courses = parsedData.courses;
+
+    const course = courses.find(
+      (element) => element.id === parseInt(req.params.id)
+    );
+
+    if (!course) {
+      res
+        .status(404)
+        .send(`the course with the id ${req.params.id} dose not existed`);
+      return;
+    }
+
+    const courseIndex = courses.indexOf(course);
+    courses.splice(courseIndex, 1);
+    res.send(course);
+
+    const stringifyCourses = JSON.stringify(parsedData, null, 2);
+
+    // write the new changes to course.json
+    fs.writeFile(path, stringifyCourses, (err) => {
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
+      console.log(" the course has been deleted successfully");
+    });
+  });
+});
+
+// validation function
+
+function courseValidation(course) {
+  const schema = Joi.object({
+    name: Joi.string().min(5).required(),
+  });
+
+  return schema.validate(course);
+}
+// set port environments
+const PORT = process.env.port || 3000;
+app.listen(PORT, () => console.log(`Listening on port ${PORT}  ...`));
