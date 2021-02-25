@@ -83,3 +83,48 @@ app.post("/api/courses", (req, res) => {
     });
   });
 });
+
+//PUT a course by id
+
+app.put("/api/courses/:id", (req, res) => {
+  const { error } = courseValidation(req.body);
+  if (error) {
+    res.status(400).send(error.details[0].message);
+    return;
+  }
+
+  fs.readFile(path, "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    }
+
+    const parsedData = JSON.parse(data);
+    const courses = parsedData.courses;
+
+    const course = courses.find(
+      (element) => element.id === parseInt(req.params.id)
+    );
+
+    if (!course) {
+      res
+        .status(404)
+        .send(`the course with the id ${req.params.id}  dose not existed`);
+      return;
+    }
+
+    course.name = req.body.name;
+    res.send(course);
+    const stringifyCourses = JSON.stringify(parsedData, null, 2);
+
+    // write the updated course to course.json
+    fs.writeFile(path, stringifyCourses, (err) => {
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
+      console.log(
+        `the course with id : ${req.params.id} has been updated successfully `
+      );
+    });
+  });
+});
