@@ -7,17 +7,15 @@ A collection of user stories you can choose from. Stories inside of each priorit
 > these are necessary for basic usability
 
 - [x] a user be able to get all courses
-      _acceptance criteria ..._
+      
+- [x]  a user be able to get one course by id
 
-- [x] - a user be able to get one course by id
-    _acceptance criteria ..._
-- [x] - a user be able to post a new course
-    _acceptance criteria ..._
-- [x] - a user be able put(update) an existing course
-    _acceptance criteria ..._
-- [x] - a user be able to delete a course by id
-    _acceptance criteria ..._
-
+- [x]  a user be able to post a new course
+    
+- [x]  a user be able put(update) an existing course
+    
+- [x]  a user be able to delete a course by id
+    
 ## Should-Haves
 
 > these will complete the user experience, but are not necessary
