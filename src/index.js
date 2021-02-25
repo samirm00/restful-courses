@@ -33,3 +33,16 @@ app.get("/api/courses", (req, res) => {
     res.status(200).send(parsedCourses);
   });
 });
+// GET one course by id
+app.get("/api/courses/:id", (req, res) => {
+  const course = parsedCourses.courses.find(
+    (element) => element.id === parseInt(req.params.id)
+  );
+  if (!course) {
+    res
+      .status(404)
+      .send(`the course with the id: ${req.params.id} dose not existed`);
+    return;
+  }
+  res.send(course);
+});
