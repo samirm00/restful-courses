@@ -1,4 +1,4 @@
-#
+# Courses RESTful API
 
 ---
 
@@ -49,7 +49,7 @@
 
 ---
 
-## 2. create a class Todo
+## 2.
 
 **As a user I want to be able to**
 
@@ -66,7 +66,7 @@
 
 ---
 
-## 3- add todo
+## 3-
 
 **As a user I want to be able to**
 
@@ -85,7 +85,7 @@
 
 ---
 
-## 4- get all todos
+## 4-
 
 **As a user I want to be able to**
 
@@ -123,7 +123,7 @@
 
 ---
 
-## 6- init
+## 6-
 
 **As a user I want to be**
 

@@ -1,4 +1,4 @@
-# Todo List
+# Courses RESTful API
 
 > A todo list allows the user to add, edit, delete, get all and get one todo by id .
 
@@ -21,11 +21,12 @@
 
 ## Technologies
 
-- JavaScript
-- HTML
-- CSS
+- Node
+- Nodemon
+- Express
 - VSC code
-- Json-server
+- JavaScript
+- Postman
 - Heroku
 
 ## Setup
