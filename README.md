@@ -1,6 +1,6 @@
 # Courses RESTful API
 
-> A RESTful API allows the user to get all course , get one course by id, update or delete a course.
+> A RESTful API allows the user to get all courses , get one course by id, update or delete a course.
 
 ## Table of contents
 
